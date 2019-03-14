@@ -1,8 +1,10 @@
 #Random order fill of magic number square KSW 11/03/2019
-#revision 1
 # 2 7 6
 # 9 5 1
 # 4 3 8 
+
+#EXEC sp_execute_external_script @language = N'R'
+#,@script =N'_RCODE_'
 
 A = c(0, 0, 0, 0, 0, 0, 0, 0, 0)
 #functions
@@ -27,3 +29,5 @@ while (pt < 10) {
 cat(A, "  \n")
 
 cat(A[1] + A[2] + A[3] + A[4] + A[5] + A[6] + A[7] + A[8] + A[9])
+
+cat("\n end of module one\n")
